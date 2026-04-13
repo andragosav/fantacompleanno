@@ -336,6 +336,16 @@
     letter-spacing: 1px;
   }
 
+  .inv-desc {
+    font-size: 0.78rem;
+    color: var(--subtext);
+    line-height: 1.4;
+    margin-top: 8px;
+    font-style: italic;
+    text-align: center;
+    padding: 0 4px;
+  }
+
   /* ===== TEAM BUILDER ===== */
   .team-builder {
     background: var(--card);
@@ -1073,19 +1083,19 @@
 // DATA
 // ===========================
 const invitati = [
-  { nome: "Mauro",     avatar: "photo", foto: "https://i.ibb.co/h1ZbsbjK/IMG-4388.avif", berti: 30 },
-  { nome: "Mattia",    avatar: "photo", foto: "https://i.ibb.co/RkMfSb8h/03e63f91-a361-4694-8234-9ec7a265df06.jpg", berti: 30 },
-  { nome: "Enrico",    avatar: "photo", foto: "https://i.ibb.co/wNjj8hpn/c736553d-98b7-4807-bda8-730b8ad51a63.jpg", berti: 30 },
-  { nome: "Federico",  avatar: "photo", foto: "https://i.ibb.co/ZzgVt5KT/08ba5e9e-2304-4dd3-8bdd-cebbf8c21992.jpg", berti: 28 },
-  { nome: "Marco Z.",  avatar: "photo", foto: "https://i.ibb.co/JjHmfhnW/1266956f-da93-42e2-9c77-068db2e8f007-2.jpg", berti: 28 },
-  { nome: "Viviana",   avatar: "photo", foto: "https://i.ibb.co/mCgFFj8N/f7dcf0f5-b0c8-4974-a1de-97ae2eeefe09.jpg", berti: 26 },
-  { nome: "Marco C.",  avatar: "photo", foto: "https://i.ibb.co/vvHwZN2r/33a768f5-bba8-4560-9315-cdc7637b84e2.jpg", berti: 26 },
-  { nome: "Paolo",     avatar: "photo", foto: "https://i.ibb.co/Jj4wCTGp/IMG-0461.avif", berti: 24 },
-  { nome: "Camilla",   avatar: "photo", foto: "https://i.ibb.co/DDqsF8KX/92e620dd-f3f3-46dd-afbf-26121ecb0340.jpg", berti: 24 },
-  { nome: "Andra",     avatar: "photo", foto: "https://i.ibb.co/Gf6NZBXV/9a8ccb28-771d-4233-88d6-776eb5c04916.jpg", berti: 22 },
-  { nome: "Samantha",  avatar: "photo", foto: "https://i.ibb.co/YTXH5Xqk/96563858-d1c3-482e-a8cc-5e013c7e2969.jpg", berti: 22 },
-  { nome: "Annalisa",  avatar: "photo", foto: "https://i.ibb.co/HpLQvJQS/d986558c-dac9-4487-8cf2-64dc9191f8b1.jpg", berti: 20 },
-  { nome: "Yara",      avatar: "photo", foto: "https://i.ibb.co/9k0rHdFK/c0db2b19-203d-4993-afe4-0f5bebaa1afb.jpg", berti: 20 },
+  { nome: "Mauro",     avatar: "photo", foto: "https://i.ibb.co/h1ZbsbjK/IMG-4388.avif", berti: 30, desc: "Il festeggiato. L'unico che può fare quello che vuole. Intoccabile... per ora." },
+  { nome: "Mattia",    avatar: "photo", foto: "https://i.ibb.co/RkMfSb8h/03e63f91-a361-4694-8234-9ec7a265df06.jpg", berti: 30, desc: "Attenzione a sceglierlo: potrebbe portare più malus che bonus. Hai paura?" },
+  { nome: "Enrico",    avatar: "photo", foto: "https://i.ibb.co/wNjj8hpn/c736553d-98b7-4807-bda8-730b8ad51a63.jpg", berti: 30, desc: "Gode di molti bonus ad personam e il software subirà un importante aggiornamento prima della festa. Unico punto debole: potrebbe infortunarsi da un momento all'altro." },
+  { nome: "Federico",  avatar: "photo", foto: "https://i.ibb.co/ZzgVt5KT/08ba5e9e-2304-4dd3-8bdd-cebbf8c21992.jpg", berti: 28, desc: "Come suo padre Bin Laden, potrebbe arrabbiarsi e sbattere il pugno sul tavolo. Probabilmente conosce il festeggiato meglio di tutti...sarà forse lui a vincere?" },
+  { nome: "Marco Z.",  avatar: "photo", foto: "https://i.ibb.co/JjHmfhnW/1266956f-da93-42e2-9c77-068db2e8f007-2.jpg", berti: 28, desc: "Da vero ludopatico dà sempre il massimo quando c'è un gioco. Sium. La presenza di Samantha però potrebbe limitarlo." },
+  { nome: "Viviana",   avatar: "photo", foto: "https://i.ibb.co/mCgFFj8N/f7dcf0f5-b0c8-4974-a1de-97ae2eeefe09.jpg", berti: 26, desc: "Senza vergogna. La vera donna alpha del party. Potrebbe però non conoscere molto del passato del festeggiato." },
+  { nome: "Marco C.",  avatar: "photo", foto: "https://i.ibb.co/vvHwZN2r/33a768f5-bba8-4560-9315-cdc7637b84e2.jpg", berti: 26, desc: "Abile in tutti i giochi, finché non si fuma una canna. Il suo FantaCompleanno potrebbe fare la stessa fine dei suoi ultimi FantaCalcio." },
+  { nome: "Paolo",     avatar: "photo", foto: "https://i.ibb.co/Jj4wCTGp/IMG-0461.avif", berti: 24, desc: "Il jolly della serata. Può succedere di tutto: potrebbe iniziare ad arrabbiarsi quando scopre che la festa non verrà fatta al Brunch Republic." },
+  { nome: "Camilla",   avatar: "photo", foto: "https://i.ibb.co/DDqsF8KX/92e620dd-f3f3-46dd-afbf-26121ecb0340.jpg", berti: 24, desc: "Dolce all'apparenza, spietata quando si tratta di giochi. Non farti ingannare. Unica debolezza: starà più in bagno che nel cuore della festa e potrebbe dover soccorrere Enrico." },
+  { nome: "Andra",     avatar: "photo", foto: "https://i.ibb.co/Gf6NZBXV/9a8ccb28-771d-4233-88d6-776eb5c04916.jpg", berti: 22, desc: "Il giudice ufficiale della serata. Quello che dice lei vale, non si discute. Sceglierla però è un rischio: avrà tempo per giocare o dovrà solo cucinare?" },
+  { nome: "Samantha",  avatar: "photo", foto: "https://i.ibb.co/YTXH5Xqk/96563858-d1c3-482e-a8cc-5e013c7e2969.jpg", berti: 22, desc: "Non sappiamo ancora molto di lei. Le verrà somministrata della droga nel bicchiere e vedremo se questo può garantire bonus o malus." },
+  { nome: "Annalisa",  avatar: "photo", foto: "https://i.ibb.co/HpLQvJQS/d986558c-dac9-4487-8cf2-64dc9191f8b1.jpg", berti: 20, desc: "Costretta dal Cuci a presentarsi a questa festa ridicola invece di visitare una galleria d'arte. Potrebbe essere la rivelazione del FantaCompleanno." },
+  { nome: "Yara",      avatar: "photo", foto: "https://i.ibb.co/9k0rHdFK/c0db2b19-203d-4993-afe4-0f5bebaa1afb.jpg", berti: 20, desc: "Potrebbe essere distratta da domande sul matrimonio. Paga il fatto che non ci siano bonus sulla cucina, altrimenti avrebbe già vinto in partenza." },
 ];
 
 var squadre = [];
@@ -1254,6 +1264,7 @@ function renderInvitati() {
       + '<div class="inv-name">' + inv.nome + '</div>'
       + '<div class="inv-berti">' + inv.berti + '</div>'
       + '<div class="inv-berti-label">Berti</div>'
+      + (inv.desc ? '<div class="inv-desc">' + inv.desc + '</div>' : '')
       + '</div>';
   });
   grid.innerHTML = html;
