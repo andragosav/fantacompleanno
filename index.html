@@ -1066,6 +1066,8 @@
   </div>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <script>
 // ===========================
 // DATA
@@ -1088,6 +1090,51 @@ const invitati = [
 
 var squadre = [];
 var punteggiLive = {};
+
+// ===========================
+// FIREBASE
+// ===========================
+var firebaseConfig = {
+  apiKey: "AIzaSyCk_uMUv48T8L-RnrZ6_K5DG9CJxO1_qz0",
+  authDomain: "fantacompleanno-aa524.firebaseapp.com",
+  databaseURL: "https://fantacompleanno-aa524-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "fantacompleanno-aa524",
+  storageBucket: "fantacompleanno-aa524.firebasestorage.app",
+  messagingSenderId: "1111741625",
+  appId: "1:1111741625:web:bb7b7dcc6626dddd0b7768"
+};
+firebase.initializeApp(firebaseConfig);
+var db = firebase.database();
+
+function saveSquadre() {
+  db.ref('squadre').set(squadre);
+}
+
+function savePunteggi() {
+  var raw = {};
+  Object.keys(punteggiLive).forEach(function(k) {
+    raw[k] = punteggiLive[k];
+  });
+  db.ref('punteggi').set(raw);
+}
+
+function loadFromFirebase() {
+  // Squadre
+  db.ref('squadre').on('value', function(snapshot) {
+    var val = snapshot.val();
+    squadre = val ? val : [];
+    renderSquadre();
+    renderPodio();
+  });
+  // Punteggi
+  db.ref('punteggi').on('value', function(snapshot) {
+    var val = snapshot.val();
+    punteggiLive = val ? val : {};
+    renderSquadre();
+    renderPodio();
+    renderPannello();
+  });
+}
 
 
 // ===========================
@@ -1291,6 +1338,7 @@ function creaSquadra() {
   });
   if (tot > 100) return showToast('Hai superato i 100 Berti! (' + tot + '/100)');
   squadre.push({ nomeSquadra: nomeSquadra, seSt: seSt, membri: [m1, m2, m3], punteggio: tot });
+  saveSquadre();
   renderSquadre();
   document.getElementById('se-stesso').value = '';
   document.getElementById('nome-squadra').value = '';
@@ -1340,6 +1388,7 @@ function toggleVoce(nomeInv, id) {
   } else {
     punteggiLive[nomeInv][id] = true;
   }
+  savePunteggi();
   var sid = makeId(nomeInv);
   var badge = document.getElementById('badge_' + sid);
   var pts = getPuntiLive(nomeInv);
@@ -1436,6 +1485,7 @@ function renderPannello() {
 function resetPunteggi() {
   if (!confirm('Azzerare tutti i punteggi live?')) return;
   punteggiLive = {};
+  savePunteggi();
   renderPannello();
   renderPodio();
   renderSquadre();
@@ -1521,7 +1571,7 @@ function showToast(msg) {
 // INIT
 // ===========================
 renderInvitati();
-renderSquadre();
+loadFromFirebase();
 </script>
 </body>
 </html>
