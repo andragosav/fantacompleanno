@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FantaCompleanno di Mauro 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #FFD700;
+    --pink: #FF6B9D;
+    --blue: #4ECDC4;
+    --purple: #A855F7;
+    --orange: #FF8C42;
+    --dark: #1A1A2E;
+    --darker: #0D0D1A;
+    --card: #16213E;
+    --card2: #0F3460;
+    --text: #F0F0FF;
+    --subtext: #A0A0C0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--darker);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ===== CONFETTI BG ===== */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255,107,157,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(78,205,196,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(168,85,247,0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,13,26,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(255,215,0,0.3);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, var(--gold), var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    background: none;
+    border: 2px solid rgba(255,215,0,0.4);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-btn:hover, .nav-btn.active {
+    background: var(--gold);
+    color: var(--darker);
+    border-color: var(--gold);
+    transform: translateY(-1px);
+  }
+
+  body { padding-bottom: 0; }
+
+  /* ===== PAGES ===== */
+  .page { display: none; position: relative; z-index: 1; }
+  .page.active { display: block; }
+
+  /* ===== HERO ===== */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+  }
+
+  .hero-emoji {
+    font-size: 5rem;
+    display: block;
+    animation: bounce 2s infinite;
+    margin-bottom: 16px;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+  }
+
+  .hero h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--pink) 50%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
+    color: var(--pink);
+    margin-bottom: 16px;
+    text-shadow: 0 0 30px rgba(255,107,157,0.5);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--subtext);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .birthday-banner {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    color: var(--darker);
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    padding: 8px 28px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 20px rgba(255,215,0,0.4);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(255,215,0,0.4); }
+    50% { box-shadow: 0 4px 40px rgba(255,215,0,0.8); }
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  .section-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* ===== REGOLAMENTO CARD ===== */
+  .reg-card {
+    background: var(--card);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .reg-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px; height: 100%;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .reg-card.gold::before { background: var(--gold); }
+  .reg-card.pink::before { background: var(--pink); }
+  .reg-card.blue::before { background: var(--blue); }
+  .reg-card.purple::before { background: var(--purple); }
+
+  .reg-card:hover { transform: translateX(4px); border-color: rgba(255,215,0,0.5); }
+
+  .reg-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .reg-card p, .reg-card li {
+    color: var(--subtext);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .reg-card ul { padding-left: 20px; }
+
+  /* ===== PUNTI TABLE ===== */
+  .punti-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 600px) { .punti-grid { grid-template-columns: 1fr; } }
+
+  .punti-col h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .punti-col.bonus h3 { color: #4ADE80; }
+  .punti-col.malus h3 { color: #F87171; }
+
+  .punto-item {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.15s;
+  }
+
+  .punto-item:hover { transform: scale(1.01); }
+
+  .punto-item span:first-child { color: var(--text); flex: 1; }
+
+  .badge {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    padding: 2px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .badge.green { background: rgba(74,222,128,0.2); color: #4ADE80; border: 1px solid rgba(74,222,128,0.4); }
+  .badge.red { background: rgba(248,113,113,0.2); color: #F87171; border: 1px solid rgba(248,113,113,0.4); }
+
+  /* ===== INVITATI PAGE ===== */
+  .invitati-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .invitato-card {
+    background: var(--card);
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .invitato-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,107,157,0.1));
+  }
+
+  .invitato-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(255,215,0,0.2); }
+  .invitato-card:hover::after { opacity: 1; }
+
+  .avatar {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .inv-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .inv-berti {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    color: var(--gold);
+  }
+
+  .inv-berti-label {
+    font-size: 0.75rem;
+    color: var(--subtext);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ===== TEAM BUILDER ===== */
+  .team-builder {
+    background: var(--card);
+    border: 1px solid rgba(78,205,196,0.3);
+    border-radius: 24px;
+    padding: 32px;
+    margin-top: 40px;
+  }
+
+  .team-builder h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    color: var(--blue);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .team-builder p {
+    color: var(--subtext);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+  /* ===== MOBILE FIXES ===== */
+  @media (max-width: 600px) {
+    .hero { padding: 30px 16px 20px; }
+    .hero-emoji { font-size: 3.5rem; }
+    .birthday-banner { font-size: 1rem; padding: 6px 18px; margin-bottom: 30px; }
+    .section { padding: 0 14px 40px; }
+    .section-title { font-size: 1.5rem; }
+    .reg-card { padding: 18px 16px; }
+    .team-builder { padding: 20px 16px; }
+    .invitati-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+    .invitato-card { padding: 16px 10px; }
+    .punti-grid { grid-template-columns: 1fr; }
+    .podio { gap: 6px; }
+    .posto-1 .podio-block { height: 130px; }
+    .posto-2 .podio-block { height: 90px; }
+    .posto-3 .podio-block { height: 60px; }
+    .premi-grid { grid-template-columns: 1fr; }
+    .squadra-card { padding: 14px 12px; }
+    .squadra-punti { font-size: 1.2rem; }
+    .podio-title { font-size: 2rem; }
+    [id^="acc_"] > div { grid-template-columns: 1fr !important; }
+    .reg-card > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; display: block !important; }
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--subtext);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    background: var(--darker);
+    border: 2px solid rgba(255,255,255,0.1);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .form-group select:focus,
+  .form-group input:focus { border-color: var(--blue); }
+
+  .form-group select option { background: var(--card); }
+
+  .btn-crea {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    box-shadow: 0 4px 20px rgba(78,205,196,0.3);
+  }
+
+  .btn-crea:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(78,205,196,0.5); }
+
+  /* ===== SQUADRE LIST ===== */
+  #squadre-list { margin-top: 32px; }
+
+  .squadra-card {
+    background: var(--card2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .squadra-info { flex: 1; min-width: 200px; }
+  .squadra-nome { font-family: 'Fredoka One', cursive; font-size: 1.1rem; color: var(--gold); }
+  .squadra-cap { font-size: 0.9rem; color: var(--subtext); }
+  .squadra-membri { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+
+  .membro-tag {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--blue);
+  }
+
+  .squadra-punti {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    color: var(--purple);
+    text-align: right;
+  }
+
+  .squadra-punti small {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--subtext);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ===== PODIO PAGE ===== */
+  .podio-container {
+    text-align: center;
+    padding: 20px 20px 60px;
+  }
+
+  .podio-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .podio-sub {
+    color: var(--subtext);
+    margin-bottom: 50px;
+    font-size: 1rem;
+  }
+
+  .podio {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .posto {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .posto-avatar {
+    font-size: 3rem;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .posto-nome {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .posto-squadra {
+    font-size: 0.8rem;
+    color: var(--subtext);
+    margin-bottom: 8px;
+  }
+
+  .posto-punti {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .podio-block {
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    padding-top: 16px;
+  }
+
+  .posto-1 .podio-block { height: 180px; background: linear-gradient(180deg, rgba(255,215,0,0.4), rgba(255,215,0,0.1)); border: 2px solid var(--gold); color: var(--gold); }
+  .posto-2 .podio-block { height: 130px; background: linear-gradient(180deg, rgba(192,192,192,0.3), rgba(192,192,192,0.05)); border: 2px solid #C0C0C0; color: #C0C0C0; }
+  .posto-3 .podio-block { height: 90px; background: linear-gradient(180deg, rgba(205,127,50,0.3), rgba(205,127,50,0.05)); border: 2px solid #CD7F32; color: #CD7F32; }
+
+  .posto-1 .posto-punti { color: var(--gold); }
+  .posto-2 .posto-punti { color: #C0C0C0; }
+  .posto-3 .posto-punti { color: #CD7F32; }
+
+  /* ===== PREMI ===== */
+  .premi-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .premi-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--gold);
+  }
+
+  .premi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 600px) { .premi-grid { grid-template-columns: 1fr; } }
+
+  .premio-card {
+    border-radius: 20px;
+    padding: 28px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .premio-card.oro {
+    background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,165,0,0.1));
+    border: 2px solid rgba(255,215,0,0.5);
+  }
+
+  .premio-card.argento {
+    background: linear-gradient(135deg, rgba(192,192,192,0.15), rgba(192,192,192,0.05));
+    border: 2px solid rgba(192,192,192,0.4);
+  }
+
+  .premio-card.bronzo {
+    background: linear-gradient(135deg, rgba(205,127,50,0.15), rgba(205,127,50,0.05));
+    border: 2px solid rgba(205,127,50,0.4);
+  }
+
+  .premio-emoji { font-size: 3rem; margin-bottom: 12px; display: block; }
+  .premio-pos {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+
+  .premio-card.oro .premio-pos { color: var(--gold); }
+  .premio-card.argento .premio-pos { color: #C0C0C0; }
+  .premio-card.bronzo .premio-pos { color: #CD7F32; }
+
+  .premio-titolo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .premio-desc {
+    font-size: 0.85rem;
+    color: var(--subtext);
+    line-height: 1.5;
+  }
+
+  /* ===== FANTA CHAMPION LOGO ===== */
+  .fanta-logo-area {
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+
+  /* ===== TOAST ===== */
+  #toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    padding: 14px 28px;
+    border-radius: 30px;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    white-space: nowrap;
+  }
+
+  #toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent);
+    margin: 32px 0;
+  }
+
+  .alert-box {
+    background: rgba(255,215,0,0.08);
+    border: 1px solid rgba(255,215,0,0.25);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--subtext);
+  }
+
+  .alert-box strong { color: var(--gold); }
+
+  /* empty state */
+  .empty-state {
+    text-align: center;
+    color: var(--subtext);
+    padding: 40px 20px;
+    font-size: 0.95rem;
+  }
+
+  .empty-state span { font-size: 3rem; display: block; margin-bottom: 10px; }
+
+  /* ===== LIVE SCORE BADGE ===== */
+  .live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(248,113,113,0.15);
+    border: 1px solid rgba(248,113,113,0.4);
+    color: #F87171;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+
+  .live-dot {
+    width: 7px; height: 7px;
+    background: #F87171;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+  .no-teams-podio {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+    color: var(--subtext);
+  }
+
+  .no-teams-podio span { font-size: 3rem; display: block; margin-bottom: 16px; }
+  .no-teams-podio p { font-size: 1rem; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">🎂 FantaCompleanno</div>
+  <div class="nav-links">
+    <button class="nav-btn active" onclick="showPage('regolamento')">📜 Regolamento</button>
+    <button class="nav-btn" onclick="showPage('invitati')">👥 Invitati & Squadre</button>
+    <button class="nav-btn" onclick="showPage('podio')">🏆 Podio</button>
+  </div>
+</nav>
+
+<!-- TOAST -->
+<div id="toast">🎉 Squadra creata!</div>
+
+<!-- ===== PAGE 1: REGOLAMENTO ===== -->
+<div id="page-regolamento" class="page active">
+
+  <div class="hero">
+    <span class="hero-emoji">🎂</span>
+    <h1>FantaCompleanno</h1>
+    <h2>di Mauro!</h2>
+    <p class="hero-sub">Il gioco fantasy ispirato al FantaSanremo, ma versione festa di compleanno.<br>Crea la tua squadra, accumula Berti e vinci premi epici!</p>
+    <div class="birthday-banner">🥳 Buon Compleanno Mauro! 🥳</div>
+  </div>
+
+  <div class="section">
+
+    <!-- COME FUNZIONA -->
+    <div class="section-title">📋 Come Funziona</div>
+
+    <div class="reg-card gold">
+      <h3>🎯 L'Obiettivo</h3>
+      <p>Ogni partecipante crea una squadra composta da <strong>sé stesso + 3 altri invitati</strong>. Durante la festa, tu porti solo <strong>bonus</strong> alla tua squadra, mentre gli altri 3 membri che hai scelto possono guadagnare <strong>bonus o malus</strong> in base a quello che combinano durante la giornata. Chi ha più Berti a fine serata con la propria squadra vince!</p>
+    </div>
+
+    <div class="reg-card pink">
+      <h3>💰 I Berti</h3>
+      <p>I Berti sono la moneta ufficiale del FantaCompleanno. Ogni partecipante ha a disposizione <strong>100 Berti</strong> da distribuire liberamente tra sé stesso e i 3 invitati che ha scelto per la sua squadra. Sta a te decidere quanto "investire" su ciascuno, ma attenzione: i Berti sono limitati, quindi scegli con saggezza!</p>
+    </div>
+
+    <div class="reg-card blue">
+      <h3>🏆 La Vittoria</h3>
+      <p>A fine serata, il giudice ufficiale <strong>(Andra!)</strong> assegna i punti bonus e malus accumulati da ogni membro durante la festa. Il punteggio finale di ogni squadra è la somma dei malus e bonus di tutti e 4 i componenti, sé stesso incluso. Chi totalizza più punti vince il FantaCompleanno di Mauro!</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- BONUS E MALUS -->
+    <div class="section-title">⚡ Tabella Punti</div>
+
+    <div class="punti-grid">
+      <!-- BONUS -->
+      <div class="punti-col bonus">
+        <h3>✅ BONUS</h3>
+
+        <div class="punto-item"><span>👗 <strong>Sorelle Pasa</strong> — Outfit matchato con un altro giocatore</span><span class="badge green">+3</span></div>
+        <div class="punto-item"><span>🕶️ <strong>Misterioso</strong> — Si presenta con gli occhiali da sole</span><span class="badge green">+1</span></div>
+        <div class="punto-item"><span>🧢 <strong>Stempiato</strong> — Si presenta con un cappello</span><span class="badge green">+2</span></div>
+        <div class="punto-item"><span>🪒 <strong>Coreano</strong> — Si presenta senza un filo di barba</span><span class="badge green">+3</span></div>
+        <div class="punto-item"><span>💇 <strong>Francia</strong> — Si presenta con la frangia</span><span class="badge green">+3</span></div>
+        <div class="punto-item"><span>🎭 <strong>"Hihihihihihi"</strong> — Si presenta con una maschera</span><span class="badge green">+3</span></div>
+        <div class="punto-item"><span>🚩 <strong>Tifoso</strong> — Si presenta con bandiera o sciarpa di una squadra sportiva</span><span class="badge green">+2</span></div>
+        <div class="punto-item"><span>🛒 <strong>Lidl</strong> — Si presenta con abbigliamento di un Supermercato</span><span class="badge green">+2</span></div>
+        <div class="punto-item"><span>🦁 <strong>Serenissima</strong> — Si presenta con la bandiera del Veneto</span><span class="badge green">+3</span></div>
+        <div class="punto-item"><span>🛵 <strong>Eros</strong> — Ordina una consegna a nome Eros</span><span class="badge green">+2</span></div>
+        <div class="punto-item"><span>🏳️‍🌈 <strong>Omosessuale</strong> — Porta Eros e Nick senza chiedere al festeggiato</span><span class="badge green">+5</span></div>
+        <div class="punto-item"><span>👨‍👩‍👧 <strong>Casa Brusada</strong> — Si fa accompagnare dai genitori</span><span class="badge green">+5</span></div>
+        <div class="punto-item"><span>🎲 <strong>Ludopatico</strong> — Usa il Random Picker</span><span class="badge green">+1</span></div>
+        <div class="punto-item"><span>🗑️ <strong>Croazia</strong> — Elimina tutte le foto dalla propria galleria</span><span class="badge green">+5</span></div>
+        <div class="punto-item"><span>💘 <strong>Che musica ascolti?</strong> — Si scarica Tinder e fa un match durante la festa</span><span class="badge green">+5</span></div>
+        <div class="punto-item"><span>❤️‍🔥 <strong>Schiaccia Costa</strong> — Porta una nuova fiamma</span><span class="badge green">+5</span></div>
+        <div class="punto-item"><span>🤳 <strong>Paparazzo Ufficiale</strong> — Fa più di 5 foto e le manda nella chat di gruppo</span><span class="badge green">+2</span></div>
+        <div class="punto-item"><span>🥂 <strong>Discorsetto Imbarazzante</strong> — Fa un brindisi con aneddoto imbarazzante su Mauro</span><span class="badge green">+1</span></div>
+      </div>
+
+      <!-- MALUS -->
+      <div class="punti-col malus">
+        <h3>❌ MALUS</h3>
+
+        <div class="punto-item"><span>🖤 <strong>Outfit total black</strong> — Outfit total black alla festa</span><span class="badge red">-3</span></div>
+        <div class="punto-item"><span>🚬 <strong>Cracovia</strong> — Chiede una sigaretta e la fuma</span><span class="badge red">-2</span></div>
+        <div class="punto-item"><span>🤡 <strong>Sharm El Sheik</strong> — Si presenta con qualcosa fake</span><span class="badge red">-1</span></div>
+        <div class="punto-item"><span>🚫 <strong>Schiavon</strong> — Non si presenta</span><span class="badge red">-5</span></div>
+        <div class="punto-item"><span>⏰ <strong>Matia</strong> — Si presenta con più di un'ora di ritardo</span><span class="badge red">-3</span></div>
+        <div class="punto-item"><span>💬 <strong>Cuci</strong> — Dice Cuci</span><span class="badge red">-1</span></div>
+        <div class="punto-item"><span>💸 <strong>Azura</strong> — Chiede ed ottiene soldi da un altro giocatore</span><span class="badge red">-5</span></div>
+        <div class="punto-item"><span>📱 <strong>Tronchin</strong> — Controlla l'App del Fantacalcio</span><span class="badge red">-1</span></div>
+        <div class="punto-item"><span>💨 <strong>Gas</strong> — Molla una scoreggia</span><span class="badge red">-3</span></div>
+        <div class="punto-item"><span>🤮 <strong>Maggiorenne</strong> — Vomita in una cariola</span><span class="badge red">-10</span></div>
+        <div class="punto-item"><span>🧩 <strong>Villach</strong> — Si estranea per fare un puzzle per più di un'ora</span><span class="badge red">-5</span></div>
+        <div class="punto-item"><span>🚽 <strong>Cami</strong> — Va in bagno</span><span class="badge red">-1</span></div>
+        <div class="punto-item"><span>💔 <strong>Infame</strong> — Nomina una ex crush di Mauro</span><span class="badge red">-3</span></div>
+        <div class="punto-item"><span>⚡ <strong>Always Pokemon</strong> — Nomina i Pokemon</span><span class="badge red">-1</span></div>
+        <div class="punto-item"><span>🎵 <strong>DJ Bitta</strong> — Cambia la musica senza chiedere</span><span class="badge red">-2</span></div>
+        <div class="punto-item"><span>🕯️ <strong>Soffiatore Seriale</strong> — Spegne le candeline al posto del festeggiato</span><span class="badge red">-4</span></div>
+        <div class="punto-item"><span>🤐 <strong>Muto come un Pesce</strong> — Non canta Tanti Auguri</span><span class="badge red">-1</span></div>
+        <div class="punto-item"><span>📵 <strong>Nemico dei Ricordi</strong> — Rifiuta la foto di gruppo o col festeggiato</span><span class="badge red">-3</span></div>
+        <div class="punto-item"><span>👊 <strong>Malo Intenzionato</strong> — Fa del male fisico a Mauro durante la giornata</span><span class="badge red">-2</span></div>
+      </div>
+    </div>
+
+    <!-- GIOCHI DA TAVOLO SPECIALI -->
+    <div class="divider"></div>
+    <div class="section-title">🎲 Regole Speciali Giochi da Tavolo</div>
+
+    <div class="reg-card pink" style="padding-bottom:20px;">
+      <h3>🕵️ Secret Hitler — <em style="font-weight:400;font-size:1rem;">Chi è il fascista tra di noi?</em></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#4ADE80;margin-bottom:8px;">✅ BONUS</div>
+          <div class="punto-item"><span>🤝 Vince ed è un liberale</span><span class="badge green">+1</span></div>
+          <div class="punto-item"><span>🦅 Vince ed è un fascista</span><span class="badge green">+2</span></div>
+          <div class="punto-item"><span>✋ Vince ed è Hitler</span><span class="badge green">+3</span></div>
+          <div class="punto-item"><span>🫡 Fa il saluto nazista esclamando "Heil Hitler"</span><span class="badge green">+1</span></div>
+        </div>
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#F87171;margin-bottom:8px;">❌ MALUS</div>
+          <div class="punto-item"><span>😑 È un fascista ma non apre gli occhi nella fase preparatoria</span><span class="badge red">-1</span></div>
+          <div class="punto-item"><span>👍 È Hitler ma non alza il pollice nella fase preparatoria</span><span class="badge red">-1</span></div>
+          <div class="punto-item"><span>📖 Chiede di rileggere il regolamento</span><span class="badge red">-1</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-card gold" style="padding-bottom:20px;">
+      <h3>🔨 The Auction Game — <em style="font-weight:400;font-size:1rem;">Punta tutto, vinci tutto!</em></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#4ADE80;margin-bottom:8px;">✅ BONUS</div>
+          <div class="punto-item"><span>📈 Fa più di 500 punti</span><span class="badge green">+1</span></div>
+          <div class="punto-item"><span>🚀 Fa più di 900 punti</span><span class="badge green">+2</span></div>
+          <div class="punto-item"><span>🏆 Fa il punteggio più alto</span><span class="badge green">+3</span></div>
+        </div>
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#F87171;margin-bottom:8px;">❌ MALUS</div>
+          <div class="punto-item"><span>😤 Si lamenta di doverci giocare</span><span class="badge red">-1</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-card blue" style="padding-bottom:20px;">
+      <h3>🧠 Quiz a Sorpresa — <em style="font-weight:400;font-size:1rem;">Quanto sai su *******?</em></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#4ADE80;margin-bottom:8px;">✅ BONUS</div>
+          <div class="punto-item"><span>🎯 Tutte giuste</span><span class="badge green">+5</span></div>
+          <div class="punto-item"><span>🔥 Più di 16 giuste</span><span class="badge green">+4</span></div>
+          <div class="punto-item"><span>👍 Più di 10 giuste</span><span class="badge green">+2</span></div>
+        </div>
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#F87171;margin-bottom:8px;">❌ MALUS</div>
+          <div class="punto-item"><span>💀 Tutte sbagliate</span><span class="badge red">-5</span></div>
+          <div class="punto-item"><span>😬 Meno di 10 giuste</span><span class="badge red">-2</span></div>
+          <div class="punto-item"><span>🥴 Il più scarso</span><span class="badge red">-4</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-card pink" style="padding-bottom:20px;">
+      <h3>📝 Post-it Game — <em style="font-weight:400;font-size:1rem;">Ce l'hai scritto in faccia!</em></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#4ADE80;margin-bottom:8px;">✅ BONUS</div>
+          <div class="punto-item"><span>🎯 Indovina il personaggio specifico (nome esatto)</span><span class="badge green">+3</span></div>
+          <div class="punto-item"><span>🤏 Indovina la categoria generale del personaggio</span><span class="badge green">+1</span></div>
+        </div>
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#F87171;margin-bottom:8px;">❌ MALUS</div>
+          <div class="punto-item"><span>💀 Non indovina il personaggio</span><span class="badge red">-4</span></div>
+          <div class="punto-item"><span>🆘 Chiede un indizio o si fa aiutare durante il suo turno</span><span class="badge red">-2</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 2: INVITATI ===== -->
+<div id="page-invitati" class="page">
+  <div style="text-align:center; padding: 50px 20px 30px;">
+    <span style="font-size:4rem; display:block; margin-bottom:12px;">👥</span>
+    <h1 style="font-family:'Fredoka One',cursive; font-size:clamp(2rem,6vw,3.5rem); color:var(--pink); margin-bottom:8px;">Invitati</h1>
+    <p style="color:var(--subtext); max-width:560px; margin:0 auto; line-height:1.6;">Questi sono i concorrenti del FantaCompleanno di Mauro. Ogni invitato ha un punteggio base in Berti. Più Berti = più difficile da schierare!</p>
+  </div>
+
+  <div class="section">
+    <div class="invitati-grid" id="invitati-grid"></div>
+
+    <div class="divider"></div>
+
+    <!-- TEAM BUILDER -->
+    <div class="team-builder">
+      <h2>⚙️ Crea la tua Squadra</h2>
+      <p>Scegli chi sei, il nome della squadra e i tuoi 3 compagni. Hai <strong>100 Berti</strong> da spendere in totale — il contatore si aggiorna in tempo reale!</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>👤 Tu sei...</label>
+          <select id="se-stesso">
+            <option value="">-- Scegli il tuo nome --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>🏷️ Nome Squadra</label>
+          <input type="text" id="nome-squadra" placeholder="Es. I Fenomeni" maxlength="30">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Membro 1</label>
+          <select id="membro1">
+            <option value="">-- Scegli --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Membro 2</label>
+          <select id="membro2">
+            <option value="">-- Scegli --</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Membro 3</label>
+          <select id="membro3">
+            <option value="">-- Scegli --</option>
+          </select>
+        </div>
+        <div class="form-group" style="display:flex; flex-direction:column; justify-content:flex-end;">
+          <label>💰 Berti spesi</label>
+          <div id="berti-counter" style="background:var(--darker); border:2px solid rgba(255,255,255,0.1); border-radius:12px; padding:10px 14px; font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--gold);">
+            0 / 100 Berti
+          </div>
+        </div>
+      </div>
+
+      <div id="berti-warning" style="display:none; background:rgba(248,113,113,0.15); border:1px solid rgba(248,113,113,0.4); color:#F87171; border-radius:12px; padding:10px 14px; margin-top:8px; font-weight:700; font-size:0.9rem;"></div>
+
+      <button class="btn-crea" onclick="creaSquadra()">🚀 Crea Squadra!</button>
+    </div>
+
+    <!-- LISTA SQUADRE -->
+    <div id="squadre-list">
+      <div class="section-title" style="margin-top:32px; margin-bottom:16px;">🏟️ Squadre Iscritte</div>
+      <div id="squadre-container">
+        <div class="empty-state"><span>🏗️</span>Nessuna squadra ancora. Sii il primo a iscriverti!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE 3: PODIO ===== -->
+<div id="page-podio" class="page">
+  <div class="podio-container">
+    <div class="fanta-logo-area">
+      <span style="font-size:4rem; display:block; margin-bottom:12px; animation:bounce 2s infinite">🏆</span>
+      <div class="podio-title">Classifica Finale</div>
+      <p class="podio-sub">FantaCompleanno di Mauro — I Vincitori della Serata <span class="live-badge"><span class="live-dot"></span>LIVE</span></p>
+    </div>
+
+    <div id="podio-content"></div>
+
+    <!-- PREMI -->
+    <div class="premi-section">
+      <div class="divider" style="max-width:700px; margin: 0 auto 32px;"></div>
+      <div class="premi-title">🎁 I Premi in Palio</div>
+      <div class="premi-grid">
+        <div class="premio-card oro">
+          <span class="premio-emoji">🥇</span>
+          <div class="premio-pos">1° Posto</div>
+          <div class="premio-titolo">Il Trono del Compleanno</div>
+          <div class="premio-desc">Medaglia d'oro personalizzata + Il privilegio di scegliere il prossimo gioco da tavolo della serata + Foto sul podio con Mauro 📸</div>
+        </div>
+        <div class="premio-card argento">
+          <span class="premio-emoji">🥈</span>
+          <div class="premio-pos">2° Posto</div>
+          <div class="premio-titolo">Vice Campione dei Berti</div>
+          <div class="premio-desc">Targa dell'onorevole secondo posto + Diritto al secondo pezzo di torta + Esenzione dal fare i piatti 🍽️</div>
+        </div>
+        <div class="premio-card bronzo">
+          <span class="premio-emoji">🥉</span>
+          <div class="premio-pos">3° Posto</div>
+          <div class="premio-titolo">Bronzo della Resistenza</div>
+          <div class="premio-desc">Diploma di "Quasi ce la facevo" + Il diritto di non cantare Tanti Auguri se non vuole + Una pacca sulla spalla da Mauro 🤝</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TUTTE LE SQUADRE -->
+    <div style="max-width:700px; margin:0 auto; padding: 0 20px 30px;">
+      <div class="section-title" style="margin-bottom:16px; justify-content:center;">📊 Classifica Completa</div>
+      <div id="classifica-completa"></div>
+    </div>
+
+    <!-- PANNELLO PUNTEGGI LIVE -->
+    <div style="max-width:800px; margin:0 auto; padding: 0 20px 60px;">
+      <div class="divider" style="margin-bottom:32px;"></div>
+      <div class="section-title" style="margin-bottom:6px; justify-content:center;">⚡ Pannello Punteggi Live
+        <span class="live-badge"><span class="live-dot"></span>ANDRA</span>
+      </div>
+      <p style="text-align:center; color:var(--subtext); font-size:0.9rem; margin-bottom:24px;">Seleziona i bonus/malus per ogni invitato. La classifica si aggiorna in tempo reale e viene salvata automaticamente 💾</p>
+
+      <div id="pannello-invitati"></div>
+
+      <div style="text-align:center; margin-top:24px;">
+        <button onclick="resetPunteggi()" style="background:rgba(248,113,113,0.15); border:1px solid rgba(248,113,113,0.4); color:#F87171; font-family:'Fredoka One',cursive; font-size:1rem; padding:10px 24px; border-radius:12px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.background='rgba(248,113,113,0.3)'" onmouseout="this.style.background='rgba(248,113,113,0.15)'">
+          🗑️ Reset tutti i punteggi
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ===========================
+// DATA
+// ===========================
+const invitati = [
+  { nome: "Mauro",     avatar: "photo", foto: "https://i.ibb.co/h1ZbsbjK/IMG-4388.avif", berti: 32 },
+  { nome: "Mattia",    avatar: "photo", foto: "https://i.ibb.co/RkMfSb8h/03e63f91-a361-4694-8234-9ec7a265df06.jpg", berti: 31 },
+  { nome: "Enrico",    avatar: "photo", foto: "https://i.ibb.co/wNjj8hpn/c736553d-98b7-4807-bda8-730b8ad51a63.jpg", berti: 30 },
+  { nome: "Federico",  avatar: "photo", foto: "https://i.ibb.co/ZzgVt5KT/08ba5e9e-2304-4dd3-8bdd-cebbf8c21992.jpg", berti: 29 },
+  { nome: "Marco Z.",  avatar: "photo", foto: "https://i.ibb.co/JjHmfhnW/1266956f-da93-42e2-9c77-068db2e8f007-2.jpg", berti: 28 },
+  { nome: "Viviana",   avatar: "photo", foto: "https://i.ibb.co/mCgFFj8N/f7dcf0f5-b0c8-4974-a1de-97ae2eeefe09.jpg", berti: 27 },
+  { nome: "Marco C.",  avatar: "photo", foto: "https://i.ibb.co/vvHwZN2r/33a768f5-bba8-4560-9315-cdc7637b84e2.jpg", berti: 26 },
+  { nome: "Paolo",     avatar: "photo", foto: "https://i.ibb.co/Jj4wCTGp/IMG-0461.avif", berti: 25 },
+  { nome: "Camilla",   avatar: "photo", foto: "https://i.ibb.co/DDqsF8KX/92e620dd-f3f3-46dd-afbf-26121ecb0340.jpg", berti: 24 },
+  { nome: "Andra",     avatar: "photo", foto: "https://i.ibb.co/Gf6NZBXV/9a8ccb28-771d-4233-88d6-776eb5c04916.jpg", berti: 23 },
+  { nome: "Samantha",  avatar: "photo", foto: "https://i.ibb.co/YTXH5Xqk/96563858-d1c3-482e-a8cc-5e013c7e2969.jpg", berti: 22 },
+  { nome: "Annalisa",  avatar: "photo", foto: "https://i.ibb.co/HpLQvJQS/d986558c-dac9-4487-8cf2-64dc9191f8b1.jpg", berti: 21 },
+  { nome: "Yara",      avatar: "photo", foto: "https://i.ibb.co/9k0rHdFK/c0db2b19-203d-4993-afe4-0f5bebaa1afb.jpg", berti: 20 },
+];
+
+var squadre = [];
+var punteggiLive = {};
+
+
+// ===========================
+// BONUS MALUS VOCI
+// ===========================
+var bonusMalusVoci = [
+  {id:'sorelle_pasa',  label:'Sorelle Pasa - Outfit matchato con un altro',          pts:3,  tipo:'bonus'},
+  {id:'misterioso',    label:'Misterioso - Si presenta con occhiali da sole',         pts:1,  tipo:'bonus'},
+  {id:'stempiato',     label:'Stempiato - Si presenta con un cappello',               pts:2,  tipo:'bonus'},
+  {id:'coreano',       label:'Coreano - Senza un filo di barba',                      pts:3,  tipo:'bonus'},
+  {id:'francia',       label:'Francia - Si presenta con la frangia',                  pts:3,  tipo:'bonus'},
+  {id:'hihihi',        label:'Hihihihi - Si presenta con una maschera',               pts:3,  tipo:'bonus'},
+  {id:'tifoso',        label:'Tifoso - Bandiera o sciarpa sportiva',                  pts:2,  tipo:'bonus'},
+  {id:'lidl',          label:'Lidl - Abbigliamento da supermercato',                  pts:2,  tipo:'bonus'},
+  {id:'serenissima',   label:'Serenissima - Bandiera del Veneto',                     pts:3,  tipo:'bonus'},
+  {id:'cracovia',      label:'Cracovia - Chiede una sigaretta e la fuma',             pts:-2, tipo:'malus'},
+  {id:'dj_bitta',      label:'DJ Bitta - Cambia la musica senza chiedere',              pts:-2, tipo:'malus'},
+  {id:'soffiatore',    label:'Soffiatore Seriale - Spegne le candeline al posto del festeggiato', pts:-4, tipo:'malus'},
+  {id:'muto',          label:'Muto come un Pesce - Non canta Tanti Auguri',             pts:-1, tipo:'malus'},
+  {id:'nemico_foto',   label:'Nemico dei Ricordi - Rifiuta la foto di gruppo o col festeggiato', pts:-3, tipo:'malus'},
+  {id:'malo',          label:'Malo Intenzionato - Fa del male fisico a Mauro',          pts:-2, tipo:'malus'},
+  {id:'eros',          label:'Eros - Ordina una consegna a nome Eros',                pts:2,  tipo:'bonus'},
+  {id:'omosessuale',   label:'Omosessuale - Porta Eros e Nick senza chiedere',        pts:5,  tipo:'bonus'},
+  {id:'casa_brusada',  label:'Casa Brusada - Si fa accompagnare dai genitori',        pts:5,  tipo:'bonus'},
+  {id:'ludopatico',    label:'Ludopatico - Usa il Random Picker',                     pts:1,  tipo:'bonus'},
+  {id:'croazia',       label:'Croazia - Elimina tutte le foto dalla galleria',        pts:5,  tipo:'bonus'},
+  {id:'tinder',        label:'Che musica ascolti? - Match su Tinder durante la festa',pts:5,  tipo:'bonus'},
+  {id:'schiaccia',     label:'Schiaccia Costa - Porta una nuova fiamma',              pts:5,  tipo:'bonus'},
+  {id:'paparazzo',     label:'Paparazzo Ufficiale - Fa piu di 5 foto e le manda in chat', pts:2,  tipo:'bonus'},
+  {id:'brindisi',      label:'Discorsetto Imbarazzante - Brindisi con aneddoto su Mauro', pts:1,  tipo:'bonus'},
+  {id:'sh_liberale',   label:'[Secret Hitler] Vince ed e un liberale',                pts:1,  tipo:'bonus'},
+  {id:'sh_fascista',   label:'[Secret Hitler] Vince ed e un fascista',                pts:2,  tipo:'bonus'},
+  {id:'sh_hitler',     label:'[Secret Hitler] Vince ed e Hitler',                     pts:3,  tipo:'bonus'},
+  {id:'sh_heil',       label:'[Secret Hitler] Fa il saluto Heil Hitler',              pts:1,  tipo:'bonus'},
+  {id:'ag_500',        label:'[Auction] Fa piu di 500 punti',                         pts:1,  tipo:'bonus'},
+  {id:'ag_900',        label:'[Auction] Fa piu di 900 punti',                         pts:2,  tipo:'bonus'},
+  {id:'ag_top',        label:'[Auction] Fa il punteggio piu alto',                    pts:3,  tipo:'bonus'},
+  {id:'quiz_all',      label:'[Quiz] Tutte giuste',                                   pts:5,  tipo:'bonus'},
+  {id:'quiz_16',       label:'[Quiz] Piu di 16 giuste',                               pts:4,  tipo:'bonus'},
+  {id:'quiz_10',       label:'[Quiz] Piu di 10 giuste',                               pts:2,  tipo:'bonus'},
+  {id:'postit_esatto', label:'[Post-it] Indovina personaggio esatto',                 pts:3,  tipo:'bonus'},
+  {id:'postit_gen',    label:'[Post-it] Indovina categoria generale',                 pts:1,  tipo:'bonus'},
+  {id:'total_black',   label:'Outfit total black alla festa',                         pts:-3, tipo:'malus'},
+  {id:'sharm',         label:'Sharm El Sheik - Si presenta con qualcosa fake',        pts:-1, tipo:'malus'},
+  {id:'schiavon',      label:'Schiavon - Non si presenta',                            pts:-5, tipo:'malus'},
+  {id:'matia',         label:'Matia - Piu di un ora di ritardo',                      pts:-3, tipo:'malus'},
+  {id:'cuci',          label:'Cuci - Dice Cuci',                                      pts:-1, tipo:'malus'},
+  {id:'azura',         label:'Azura - Chiede soldi a un altro giocatore',             pts:-5, tipo:'malus'},
+  {id:'tronchin',      label:'Tronchin - Controlla App del Fantacalcio',              pts:-1, tipo:'malus'},
+  {id:'gas',           label:'Gas - Molla una scoreggia',                             pts:-3, tipo:'malus'},
+  {id:'maggiorenne',   label:'Maggiorenne - Vomita in una cariola',                   pts:-10,tipo:'malus'},
+  {id:'villach',       label:'Villach - Puzzle per piu di un ora',                    pts:-5, tipo:'malus'},
+  {id:'cami',          label:'Cami - Va in bagno',                                    pts:-1, tipo:'malus'},
+  {id:'infame',        label:'Infame - Nomina una ex crush di Mauro',                 pts:-3, tipo:'malus'},
+  {id:'pokemon',       label:'Always Pokemon - Nomina i Pokemon',                     pts:-1, tipo:'malus'},
+  {id:'sh_occhi',      label:'[Secret Hitler] Fascista non apre gli occhi',           pts:-1, tipo:'malus'},
+  {id:'sh_pollice',    label:'[Secret Hitler] Hitler non alza il pollice',            pts:-1, tipo:'malus'},
+  {id:'sh_reg',        label:'[Secret Hitler] Chiede di rileggere il regolamento',    pts:-1, tipo:'malus'},
+  {id:'ag_lament',     label:'[Auction] Si lamenta di doverci giocare',               pts:-1, tipo:'malus'},
+  {id:'quiz_zero',     label:'[Quiz] Tutte sbagliate',                                pts:-5, tipo:'malus'},
+  {id:'quiz_sub10',    label:'[Quiz] Meno di 10 giuste',                              pts:-2, tipo:'malus'},
+  {id:'quiz_scarso',   label:'[Quiz] Il piu scarso',                                  pts:-4, tipo:'malus'},
+  {id:'postit_fail',   label:'[Post-it] Non indovina il personaggio',                 pts:-4, tipo:'malus'},
+  {id:'postit_aiuto',  label:'[Post-it] Chiede indizio o si fa aiutare',              pts:-2, tipo:'malus'}
+];
+
+// ===========================
+// HELPERS
+// ===========================
+function makeId(nome) {
+  return nome.replace(/[^a-zA-Z0-9]/g, '_');
+}
+
+function getPuntiLive(nomeInv) {
+  var sel = punteggiLive[nomeInv];
+  if (!sel) return 0;
+  var tot = 0;
+  sel.forEach(function(id) {
+    var v = bonusMalusVoci.filter(function(x){ return x.id === id; })[0];
+    if (v) tot += v.pts;
+  });
+  return tot;
+}
+
+function punteggioSquadra(sq) {
+  var tutti = [sq.seSt].concat(sq.membri);
+  var tot = 0;
+  tutti.forEach(function(nome) {
+    tot += getPuntiLive(nome);
+  });
+  return tot;
+}
+
+// ===========================
+// NAVIGATION
+// ===========================
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.nav-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('page-' + page).classList.add('active');
+  event.target.classList.add('active');
+  if (page === 'podio') { renderPodio(); renderPannello(); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===========================
+// RENDER INVITATI
+// ===========================
+function renderInvitati() {
+  var grid = document.getElementById('invitati-grid');
+  var html = '';
+  invitati.forEach(function(inv) {
+    var fotoHtml = inv.avatar === 'photo'
+      ? '<img src="' + inv.foto + '" style="width:110px;height:110px;border-radius:50%;object-fit:cover;margin-bottom:10px;border:3px solid var(--gold);display:block;margin-left:auto;margin-right:auto;">'
+      : '<span class="avatar">' + inv.avatar + '</span>';
+    html += '<div class="invitato-card">' + fotoHtml
+      + '<div class="inv-name">' + inv.nome + '</div>'
+      + '<div class="inv-berti">' + inv.berti + '</div>'
+      + '<div class="inv-berti-label">Berti</div>'
+      + '</div>';
+  });
+  grid.innerHTML = html;
+
+  var seSel = document.getElementById('se-stesso');
+  var opts = '<option value="">-- Scegli il tuo nome --</option>';
+  invitati.forEach(function(inv){ opts += '<option value="' + inv.nome + '">' + inv.nome + ' (' + inv.berti + ' Berti)</option>'; });
+  seSel.innerHTML = opts;
+  seSel.addEventListener('change', updateBertiCounter);
+
+  ['membro1','membro2','membro3'].forEach(function(id) {
+    var sel = document.getElementById(id);
+    var o = '<option value="">-- Scegli --</option>';
+    invitati.forEach(function(inv){ o += '<option value="' + inv.nome + '">' + inv.nome + ' (' + inv.berti + ' Berti)</option>'; });
+    sel.innerHTML = o;
+    sel.addEventListener('change', updateBertiCounter);
+  });
+}
+
+function updateBertiCounter() {
+  var seSt = document.getElementById('se-stesso').value;
+  var m1 = document.getElementById('membro1').value;
+  var m2 = document.getElementById('membro2').value;
+  var m3 = document.getElementById('membro3').value;
+  var tutti = [seSt, m1, m2, m3].filter(function(x){ return x !== ''; });
+  var tot = 0;
+  tutti.forEach(function(nome) {
+    var inv = invitati.filter(function(i){ return i.nome === nome; })[0];
+    if (inv) tot += inv.berti;
+  });
+  var counter = document.getElementById('berti-counter');
+  var warning = document.getElementById('berti-warning');
+  var rimasti = 100 - tot;
+  counter.textContent = tot + ' / 100 Berti';
+  if (tot > 100) {
+    counter.style.color = '#F87171';
+    counter.style.borderColor = 'rgba(248,113,113,0.4)';
+    warning.style.display = 'block';
+    warning.style.background = 'rgba(248,113,113,0.15)';
+    warning.style.borderColor = 'rgba(248,113,113,0.4)';
+    warning.style.color = '#F87171';
+    warning.textContent = 'Hai superato i 100 Berti di ' + (tot-100) + '! Cambia qualche membro.';
+  } else if (tot === 100) {
+    counter.style.color = '#4ADE80';
+    counter.style.borderColor = 'rgba(74,222,128,0.4)';
+    warning.style.display = 'none';
+  } else {
+    counter.style.color = 'var(--gold)';
+    counter.style.borderColor = 'rgba(255,255,255,0.1)';
+    if (rimasti > 0 && tutti.length > 0) {
+      warning.style.display = 'block';
+      warning.style.background = 'rgba(255,215,0,0.08)';
+      warning.style.borderColor = 'rgba(255,215,0,0.3)';
+      warning.style.color = 'var(--gold)';
+      warning.textContent = 'Ti rimangono ' + rimasti + ' Berti da spendere.';
+    } else {
+      warning.style.display = 'none';
+    }
+  }
+}
+
+// ===========================
+// CREA SQUADRA
+// ===========================
+function creaSquadra() {
+  var seSt = document.getElementById('se-stesso').value;
+  var nomeSquadra = document.getElementById('nome-squadra').value.trim();
+  var m1 = document.getElementById('membro1').value;
+  var m2 = document.getElementById('membro2').value;
+  var m3 = document.getElementById('membro3').value;
+  if (!seSt) return showToast('Scegli chi sei!');
+  if (!nomeSquadra) return showToast('Dai un nome alla squadra!');
+  if (!m1 || !m2 || !m3) return showToast('Scegli 3 membri!');
+  var tutti = [seSt, m1, m2, m3];
+  var unici = {};
+  tutti.forEach(function(n){ unici[n] = true; });
+  if (Object.keys(unici).length < 4) return showToast('Non puoi scegliere lo stesso invitato due volte!');
+  var tot = 0;
+  tutti.forEach(function(nome) {
+    var inv = invitati.filter(function(i){ return i.nome === nome; })[0];
+    if (inv) tot += inv.berti;
+  });
+  if (tot > 100) return showToast('Hai superato i 100 Berti! (' + tot + '/100)');
+  squadre.push({ nomeSquadra: nomeSquadra, seSt: seSt, membri: [m1, m2, m3], punteggio: tot });
+  renderSquadre();
+  document.getElementById('se-stesso').value = '';
+  document.getElementById('nome-squadra').value = '';
+  ['membro1','membro2','membro3'].forEach(function(id){ document.getElementById(id).value = ''; });
+  document.getElementById('berti-counter').textContent = '0 / 100 Berti';
+  document.getElementById('berti-counter').style.color = 'var(--gold)';
+  document.getElementById('berti-warning').style.display = 'none';
+  showToast('Squadra "' + nomeSquadra + '" creata!');
+}
+
+// ===========================
+// RENDER SQUADRE
+// ===========================
+function renderSquadre() {
+  var container = document.getElementById('squadre-container');
+  if (squadre.length === 0) {
+    container.innerHTML = '<div class="empty-state"><span>🏗️</span>Nessuna squadra ancora. Sii il primo a iscriverti!</div>';
+    return;
+  }
+  var sorted = squadre.slice().sort(function(a,b){ return punteggioSquadra(b) - punteggioSquadra(a); });
+  var html = '';
+  sorted.forEach(function(sq, i) {
+    var ptTot = punteggioSquadra(sq);
+    var medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':'#'+(i+1);
+    var membriHtml = '<span class="membro-tag" style="border-color:var(--gold);color:var(--gold);">⭐ ' + sq.seSt + '</span>';
+    sq.membri.forEach(function(m){ membriHtml += '<span class="membro-tag">' + m + '</span>'; });
+    html += '<div class="squadra-card">'
+      + '<div style="font-size:1.6rem;margin-right:12px;">' + medal + '</div>'
+      + '<div class="squadra-info">'
+      + '<div class="squadra-nome">' + sq.nomeSquadra + '</div>'
+      + '<div class="squadra-cap">👤 Partecipante: <strong>' + sq.seSt + '</strong></div>'
+      + '<div class="squadra-membri">' + membriHtml + '</div>'
+      + '</div>'
+      + '<div class="squadra-punti">' + ptTot + '<small>punti</small></div>'
+      + '</div>';
+  });
+  container.innerHTML = html;
+}
+
+// ===========================
+// PANNELLO PUNTEGGI LIVE
+// ===========================
+function toggleVoce(nomeInv, id) {
+  if (!punteggiLive[nomeInv]) punteggiLive[nomeInv] = {};
+  if (punteggiLive[nomeInv][id]) {
+    delete punteggiLive[nomeInv][id];
+  } else {
+    punteggiLive[nomeInv][id] = true;
+  }
+  var sid = makeId(nomeInv);
+  var badge = document.getElementById('badge_' + sid);
+  var pts = getPuntiLive(nomeInv);
+  if (badge) {
+    badge.textContent = (pts >= 0 ? '+' : '') + pts + ' pt';
+    badge.style.background = pts > 0 ? 'rgba(74,222,128,0.2)' : pts < 0 ? 'rgba(248,113,113,0.2)' : 'rgba(255,255,255,0.08)';
+    badge.style.color = pts > 0 ? '#4ADE80' : pts < 0 ? '#F87171' : 'var(--subtext)';
+    badge.style.borderColor = pts > 0 ? 'rgba(74,222,128,0.4)' : pts < 0 ? 'rgba(248,113,113,0.4)' : 'rgba(255,255,255,0.1)';
+  }
+  renderPodio();
+  renderSquadre();
+}
+
+function getPuntiLive(nomeInv) {
+  var sel = punteggiLive[nomeInv];
+  if (!sel) return 0;
+  var tot = 0;
+  Object.keys(sel).forEach(function(id) {
+    var v = bonusMalusVoci.filter(function(x){ return x.id === id; })[0];
+    if (v) tot += v.pts;
+  });
+  return tot;
+}
+
+function toggleAccordion(sid) {
+  var body = document.getElementById('acc_' + sid);
+  var arrow = document.getElementById('arrow_' + sid);
+  if (!body) return;
+  var isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  if (arrow) arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+
+function renderPannello() {
+  var container = document.getElementById('pannello-invitati');
+  if (!container) return;
+  var bonusVoci = bonusMalusVoci.filter(function(v){ return v.tipo === 'bonus'; });
+  var malusVoci = bonusMalusVoci.filter(function(v){ return v.tipo === 'malus'; });
+  var html = '';
+  invitati.forEach(function(inv) {
+    var sid = makeId(inv.nome);
+    var pts = getPuntiLive(inv.nome);
+    var sel = punteggiLive[inv.nome] || {};
+    var ptsLabel = (pts >= 0 ? '+' : '') + pts + ' pt';
+    var badgeColor = pts > 0 ? 'rgba(74,222,128,0.2)' : pts < 0 ? 'rgba(248,113,113,0.2)' : 'rgba(255,255,255,0.08)';
+    var badgeText = pts > 0 ? '#4ADE80' : pts < 0 ? '#F87171' : 'var(--subtext)';
+    var badgeBorder = pts > 0 ? 'rgba(74,222,128,0.4)' : pts < 0 ? 'rgba(248,113,113,0.4)' : 'rgba(255,255,255,0.1)';
+    var fotoHtml = inv.avatar === 'photo'
+      ? '<img src="' + inv.foto + '" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0;">'
+      : '<span style="font-size:2rem;">' + inv.avatar + '</span>';
+
+    var bonusHtml = '';
+    bonusVoci.forEach(function(v) {
+      var isChecked = sel[v.id] ? true : false;
+      var chk = isChecked ? ' checked' : '';
+      var bg = isChecked ? 'rgba(74,222,128,0.12)' : '#0F3460';
+      var bd = isChecked ? 'rgba(74,222,128,0.4)' : 'rgba(255,255,255,0.06)';
+      bonusHtml += '<label style="display:flex;align-items:center;gap:8px;background:' + bg + ';border:1px solid ' + bd + ';border-radius:10px;padding:8px 10px;margin-bottom:6px;cursor:pointer;font-size:0.8rem;line-height:1.3;">'
+        + '<input type="checkbox"' + chk + ' onchange="toggleVoce(\'' + inv.nome.replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\',\'' + v.id + '\')" style="accent-color:#4ADE80;flex-shrink:0;width:16px;height:16px;">'
+        + '<span style="flex:1;">' + v.label + '</span>'
+        + '<span style="color:#4ADE80;font-weight:800;flex-shrink:0;">+' + v.pts + '</span>'
+        + '</label>';
+    });
+
+    var malusHtml = '';
+    malusVoci.forEach(function(v) {
+      var isChecked = sel[v.id] ? true : false;
+      var chk = isChecked ? ' checked' : '';
+      var bg = isChecked ? 'rgba(248,113,113,0.12)' : '#0F3460';
+      var bd = isChecked ? 'rgba(248,113,113,0.4)' : 'rgba(255,255,255,0.06)';
+      malusHtml += '<label style="display:flex;align-items:center;gap:8px;background:' + bg + ';border:1px solid ' + bd + ';border-radius:10px;padding:8px 10px;margin-bottom:6px;cursor:pointer;font-size:0.8rem;line-height:1.3;">'
+        + '<input type="checkbox"' + chk + ' onchange="toggleVoce(\'' + inv.nome.replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\',\'' + v.id + '\')" style="accent-color:#F87171;flex-shrink:0;width:16px;height:16px;">'
+        + '<span style="flex:1;">' + v.label + '</span>'
+        + '<span style="color:#F87171;font-weight:800;flex-shrink:0;">' + v.pts + '</span>'
+        + '</label>';
+    });
+
+    html += '<div style="background:#16213E;border:1px solid rgba(255,255,255,0.08);border-radius:16px;margin-bottom:10px;overflow:hidden;">'
+      + '<div onclick="toggleAccordion(\'' + sid + '\')" style="display:flex;align-items:center;gap:12px;padding:14px 18px;cursor:pointer;user-select:none;">'
+      + fotoHtml
+      + '<div style="flex:1;font-family:Fredoka One,cursive;font-size:1.1rem;">' + inv.nome + '</div>'
+      + '<span id="badge_' + sid + '" style="font-size:0.95rem;font-weight:800;padding:3px 12px;border-radius:10px;border:1px solid ' + badgeBorder + ';background:' + badgeColor + ';color:' + badgeText + ';transition:all 0.2s;">' + ptsLabel + '</span>'
+      + '<span id="arrow_' + sid + '" style="color:#A0A0C0;font-size:1rem;margin-left:8px;transition:transform 0.2s;">▼</span>'
+      + '</div>'
+      + '<div id="acc_' + sid + '" style="display:none;padding:0 18px 16px;border-top:1px solid rgba(255,255,255,0.06);">'
+      + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">'
+      + '<div><div style="font-size:0.9rem;font-weight:800;color:#4ADE80;margin-bottom:8px;">BONUS</div>' + bonusHtml + '</div>'
+      + '<div><div style="font-size:0.9rem;font-weight:800;color:#F87171;margin-bottom:8px;">MALUS</div>' + malusHtml + '</div>'
+      + '</div></div></div>';
+  });
+  container.innerHTML = html;
+}
+
+function resetPunteggi() {
+  if (!confirm('Azzerare tutti i punteggi live?')) return;
+  punteggiLive = {};
+  renderPannello();
+  renderPodio();
+  renderSquadre();
+  showToast('Punteggi azzerati!');
+}
+
+// ===========================
+// PODIO
+// ===========================
+function renderPodio() {
+  var content = document.getElementById('podio-content');
+  var classifica = document.getElementById('classifica-completa');
+  if (!content) return;
+
+  if (squadre.length === 0) {
+    content.innerHTML = '<div class="no-teams-podio"><span>🏗️</span><p>Nessuna squadra ancora iscritta!<br>Vai su <strong>Invitati &amp; Squadre</strong> e crea la tua squadra prima.</p></div>';
+    classifica.innerHTML = '';
+    return;
+  }
+
+  var sorted = squadre.slice().sort(function(a,b){ return punteggioSquadra(b) - punteggioSquadra(a); });
+  var top = sorted.slice(0,3);
+  var order = top.length >= 2 ? [top[1], top[0], top[2]].filter(function(x){return x;}) : [top[0]];
+  var posClasses = top.length >= 2 ? ['posto-2','posto-1','posto-3'] : ['posto-1'];
+  var blockTexts = ['🥈','🥇','🥉'];
+
+  var podioHtml = '<div class="podio">';
+  order.forEach(function(sq, i) {
+    var inv = invitati.filter(function(x){ return x.nome === sq.seSt; })[0];
+    var fotoHtml = inv && inv.avatar === 'photo'
+      ? '<img src="' + inv.foto + '" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);display:block;margin:0 auto 8px;">'
+      : '<span class="posto-avatar">' + (inv ? inv.avatar : '🧑') + '</span>';
+    var ptTot = punteggioSquadra(sq);
+    podioHtml += '<div class="posto ' + posClasses[i] + '">'
+      + fotoHtml
+      + '<div class="posto-nome">' + sq.nomeSquadra + '</div>'
+      + '<div class="posto-squadra">di ' + sq.seSt + '</div>'
+      + '<div class="posto-punti">' + ptTot + ' <small style="font-size:0.7rem;color:#A0A0C0">pt</small></div>'
+      + '<div class="podio-block">' + blockTexts[i] + '</div>'
+      + '</div>';
+  });
+  podioHtml += '</div>';
+  content.innerHTML = podioHtml;
+
+  var classHtml = '';
+  sorted.forEach(function(sq, i) {
+    var ptTot = punteggioSquadra(sq);
+    var medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':'#'+(i+1);
+    var tutti = [sq.seSt].concat(sq.membri);
+    var membriHtml = '';
+    tutti.forEach(function(nome) {
+      var inv = invitati.filter(function(x){ return x.nome === nome; })[0];
+      var base = inv ? inv.berti : 0;
+      var live = getPuntiLive(nome);
+      var liveStr = live !== 0 ? (live > 0 ? '+'+live : ''+live) : '';
+      var style = nome === sq.seSt ? 'border-color:var(--gold);color:var(--gold);' : '';
+      membriHtml += '<span class="membro-tag" style="' + style + '">' + (nome===sq.seSt?'⭐ ':'') + nome + ' <small>(' + base + (liveStr?liveStr:'') + ')</small></span>';
+    });
+    classHtml += '<div class="squadra-card">'
+      + '<div style="font-size:1.6rem;margin-right:12px;">' + medal + '</div>'
+      + '<div class="squadra-info">'
+      + '<div class="squadra-nome">' + sq.nomeSquadra + '</div>'
+      + '<div class="squadra-cap">👤 Partecipante: <strong>' + sq.seSt + '</strong></div>'
+      + '<div class="squadra-membri">' + membriHtml + '</div>'
+      + '</div>'
+      + '<div class="squadra-punti">' + ptTot + '<small>punti</small></div>'
+      + '</div>';
+  });
+  classifica.innerHTML = classHtml;
+}
+
+// ===========================
+// TOAST
+// ===========================
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2800);
+}
+
+// ===========================
+// INIT
+// ===========================
+renderInvitati();
+renderSquadre();
+</script>
+</body>
+</html>
