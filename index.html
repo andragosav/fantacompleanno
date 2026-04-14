@@ -1222,29 +1222,29 @@ function getPuntiLive(nomeInv) {
   var sel = punteggiLive[nomeInv];
   if (!sel) return 0;
   var tot = 0;
-  sel.forEach(function(id) {
+  Object.keys(sel).forEach(function(id) {
     var v = bonusMalusVoci.filter(function(x){ return x.id === id; })[0];
     if (v) tot += v.pts;
   });
   return tot;
 }
 
-function getPuntiBonusSolo(nomeInv) {
+// Restituisce solo i bonus di un invitato (ignora i malus)
+function getSoloBonusLive(nomeInv) {
   var sel = punteggiLive[nomeInv];
   if (!sel) return 0;
   var tot = 0;
   Object.keys(sel).forEach(function(id) {
     var v = bonusMalusVoci.filter(function(x){ return x.id === id; })[0];
-    if (v && v.tipo === 'bonus') tot += v.pts;
+    if (v && v.pts > 0) tot += v.pts;
   });
   return tot;
 }
 
 function punteggioSquadra(sq) {
-  var tot = 0;
-  // "Tu sei": solo bonus
-  tot += getPuntiBonusSolo(sq.seSt);
-  // 3 membri: bonus + malus
+  // "Tu sei..." conta SOLO i suoi bonus (i malus non entrano nel punteggio)
+  var tot = getSoloBonusLive(sq.seSt);
+  // I 3 membri contano bonus + malus
   sq.membri.forEach(function(nome) {
     tot += getPuntiLive(nome);
   });
@@ -1424,17 +1424,6 @@ function toggleVoce(nomeInv, id) {
   }
   renderPodio();
   renderSquadre();
-}
-
-function getPuntiLive(nomeInv) {
-  var sel = punteggiLive[nomeInv];
-  if (!sel) return 0;
-  var tot = 0;
-  Object.keys(sel).forEach(function(id) {
-    var v = bonusMalusVoci.filter(function(x){ return x.id === id; })[0];
-    if (v) tot += v.pts;
-  });
-  return tot;
 }
 
 function toggleAccordion(sid) {
