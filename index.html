@@ -205,6 +205,7 @@
   .reg-card.pink::before { background: var(--pink); }
   .reg-card.blue::before { background: var(--blue); }
   .reg-card.purple::before { background: var(--purple); }
+  .reg-card.orange::before { background: var(--orange); }
 
   .reg-card:hover { transform: translateX(4px); border-color: rgba(255,215,0,0.5); }
 
@@ -932,6 +933,94 @@
           <div class="punto-item"><span>🆘 Chiede un indizio o si fa aiutare durante il suo turno</span><span class="badge red">-2</span></div>
         </div>
       </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🥊 Regole Speciali Sfide</div>
+
+    <div class="alert-box">
+      ⚠️ <strong>Nota Bene:</strong> Per le sfide, i malus si applicano anche al proprio "Tu SEI..." (a differenza del punteggio normale, dove i malus su sé stessi vengono ignorati).
+    </div>
+
+    <div class="reg-card purple" style="padding-bottom:20px;">
+      <h3>👤 Sfida Singola</h3>
+      <p style="margin-bottom:14px;">Un solo partecipante accetta la sfida: sceglie tra tutti gli invitati a chi assegnare un malus.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#4ADE80;margin-bottom:8px;">✅ SE VINCE</div>
+          <div class="punto-item"><span>🏆 Guadagna bonus</span><span class="badge green">+2</span></div>
+          <div class="punto-item"><span>🎯 Assegna un malus a un invitato a scelta (chiunque)</span><span class="badge red">−3</span></div>
+        </div>
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#F87171;margin-bottom:8px;">❌ SE PERDE</div>
+          <div class="punto-item"><span>💀 Malus per sé stesso</span><span class="badge red">−2</span></div>
+          <div class="punto-item"><span>😬 Malus a tutti i partecipanti che lo hanno scelto in squadra (sia come "Tu SEI..." che come membro)</span><span class="badge red">−2</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-card orange" style="padding-bottom:20px;">
+      <h3>👥 Sfida Multipla</h3>
+      <p style="margin-bottom:14px;">Più partecipanti vogliono sfidarsi: si formano squadre da <strong>2 invitati</strong> (o una da <strong>3</strong> se il numero è dispari).</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#4ADE80;margin-bottom:8px;">✅ SQUADRA VINCITRICE</div>
+          <div class="punto-item"><span>🏆 Bonus per ciascun vincitore</span><span class="badge green">+2</span></div>
+          <div class="punto-item"><span>🎯 Assegnano un malus allo sfidante</span><span class="badge red">−3</span></div>
+        </div>
+        <div>
+          <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#F87171;margin-bottom:8px;">❌ SQUADRA PERDENTE</div>
+          <div class="punto-item"><span>💀 Malus per ciascun perdente</span><span class="badge red">−2</span></div>
+          <div class="punto-item"><span>😬 Malus a tutti i partecipanti che li hanno scelti in squadra (sia come "Tu SEI..." che come membro)</span><span class="badge red">−2</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-box" style="margin-top:0;">
+      🔁 <strong>Nessun limite</strong> al numero di sfide che si possono fare durante la festa. Sfidatevi quanto volete!
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">⚡ Le Sfide</div>
+
+    <div class="reg-card pink">
+      <h3>🙈 Blindfold Bites</h3>
+      <p><em>I tuoi sensi ti tradiranno?</em><br>Metti alla prova le tue papille gustative in una sfida al buio totale. Bendato, dovrai riconoscere cosa stai assaggiando — ma fidati, non sarà così semplice come pensi. Velocità e palato fino faranno la differenza.</p>
+    </div>
+
+    <div class="reg-card blue">
+      <h3>📦 Mirror Match</h3>
+      <p><em>Puoi ricreare ciò che non vedi?</em><br>Sopra una scatola dovrai disporre degli oggetti — ma l'ordine non è casuale, e tu non puoi vedere cosa c'è sotto. Ragiona, senti, deduci. Chi riesce a replicare l'ordine corretto nel minor tempo vince.</p>
+    </div>
+
+    <div class="reg-card purple">
+      <h3>🧠 Brainiac Battle</h3>
+      <p><em>Quanto sei intelligente... davvero?</em><br>Niente fortuna, niente fisica — qui vince solo chi pensa meglio. Una sfida di logica pura (con un pizzico di matematica) che metterà a dura prova la tua testa. Sei sicuro di voler partecipare?</p>
+    </div>
+
+    <div class="reg-card gold">
+      <h3>🏃 Atletica</h3>
+      <p><em>La città è il tuo campo da gioco.</em><br>Una sfida dinamica che può scattare in qualsiasi momento. Chi è più attento e reattivo porterà a casa la vittoria.</p>
+    </div>
+
+    <div class="reg-card orange">
+      <h3>🔨 The Auction Game</h3>
+      <p><em>Dalla teoria alla pratica — stavolta è una sfida vera.</em><br>Conosci già le regole, ma ora le dinamiche cambiano. Metti alla prova la tua strategia in formato sfida diretta. Chi sa puntare meglio sotto pressione?</p>
+    </div>
+
+    <div class="reg-card blue">
+      <h3>🌍 Geografia</h3>
+      <p><em>Conosci davvero il tuo paese?</em><br>Metti alla prova la tua memoria geografica in una sfida a colpi di nomi, luoghi e territori. Più sai, più vinci.</p>
+    </div>
+
+    <div class="reg-card pink">
+      <h3>🎧 Whisper Challenge</h3>
+      <p><em>Attenzione — il doppio senso è dietro l'angolo.</em><br>Cuffie alle orecchie, musica a palla. Il tuo sfidante muoverà le labbra — tu dovrai capire cosa sta dicendo. Sembra facile? Aspetta di vedere le frasi.</p>
+    </div>
+
+    <div class="reg-card gold" style="border-color:rgba(248,113,113,0.4);">
+      <h3>🍩 EXTREME CHALLENGE <span style="font-size:0.8rem;font-weight:600;color:#F87171;background:rgba(248,113,113,0.15);border:1px solid rgba(248,113,113,0.4);padding:2px 10px;border-radius:10px;margin-left:8px;">Iscrizione obbligatoria in anticipo</span></h3>
+      <p><em>Non è una sfida per stomaci deboli.</em><br>Questa è l'unica sfida che ti sveliamo completamente — perché devi farci sapere in anticipo se hai il coraggio di affrontarla. Si tratta di ingurgitare 10 krapfen misti in 5 minuti. Replicherai l'esofagite di Enrico al Palio?</p>
     </div>
 
   </div>
