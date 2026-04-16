@@ -1457,9 +1457,7 @@ var bonusMalusVoci = [
   {id:'sh_fascista',   label:'[Secret Hitler] Vince ed e un fascista',                pts:2,  tipo:'bonus'},
   {id:'sh_hitler',     label:'[Secret Hitler] Vince ed e Hitler',                     pts:3,  tipo:'bonus'},
   {id:'sh_heil',       label:'[Secret Hitler] Fa il saluto Heil Hitler',              pts:1,  tipo:'bonus'},
-  {id:'ag_500',        label:'[Auction] Fa piu di 500 punti',                         pts:1,  tipo:'bonus'},
-  {id:'ag_900',        label:'[Auction] Fa piu di 900 punti',                         pts:2,  tipo:'bonus'},
-  {id:'ag_top',        label:'[Auction] Fa il punteggio piu alto',                    pts:3,  tipo:'bonus'},
+
   {id:'quiz_all',      label:'[Quiz] Tutte giuste',                                   pts:5,  tipo:'bonus'},
   {id:'quiz_16',       label:'[Quiz] Piu di 16 giuste',                               pts:4,  tipo:'bonus'},
   {id:'quiz_10',       label:'[Quiz] Piu di 10 giuste',                               pts:2,  tipo:'bonus'},
@@ -1481,7 +1479,7 @@ var bonusMalusVoci = [
   {id:'sh_occhi',      label:'[Secret Hitler] Fascista non apre gli occhi',           pts:-1, tipo:'malus'},
   {id:'sh_pollice',    label:'[Secret Hitler] Hitler non alza il pollice',            pts:-1, tipo:'malus'},
   {id:'sh_reg',        label:'[Secret Hitler] Chiede di rileggere il regolamento',    pts:-1, tipo:'malus'},
-  {id:'ag_lament',     label:'[Auction] Si lamenta di doverci giocare',               pts:-1, tipo:'malus'},
+
   {id:'quiz_zero',     label:'[Quiz] Tutte sbagliate',                                pts:-5, tipo:'malus'},
   {id:'quiz_sub10',    label:'[Quiz] Meno di 10 giuste',                              pts:-2, tipo:'malus'},
   {id:'quiz_scarso',   label:'[Quiz] Il piu scarso',                                  pts:-4, tipo:'malus'},
@@ -1810,9 +1808,7 @@ function renderPannello() {
       { key: 'geografia',  label: '🌍 Geografia' },
       { key: 'whisper',    label: '🎧 Whisper' },
       { key: 'extreme',    label: '🍩 Extreme' },
-      { key: 'quiz',       label: '❓ Quiz' },
-      { key: 'postit',     label: '📝 Post-it' },
-      { key: 'sh',         label: '🎭 Secret Hitler' },
+
     ];
     var nomeEsc = inv.nome.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
     var sfideHtml = '<div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.06);">'
