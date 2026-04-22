@@ -793,7 +793,7 @@
 
     <div class="reg-card gold">
       <h3>🎯 L'Obiettivo</h3>
-      <p>Ogni partecipante crea una squadra composta da <strong>sé stesso + 3 altri invitati</strong>. Durante la festa, tu porti solo <strong>bonus</strong> alla tua squadra, mentre gli altri 3 membri che hai scelto possono guadagnare <strong>bonus o malus</strong> in base a quello che combinano durante la giornata. Chi ha più punti a fine serata con la propria squadra vince!</p>
+      <p>Ogni partecipante crea una squadra composta da <strong>sé stesso + 3 altri invitati</strong>. Durante la festa, <strong>tutti i membri</strong> — te compreso — possono guadagnare <strong>bonus o malus</strong> in base a quello che combinano durante la giornata. Chi ha più punti a fine serata con la propria squadra vince!</p>
     </div>
 
     <div class="reg-card pink">
@@ -1517,8 +1517,8 @@ function getSoloBonusLive(nomeInv) {
 }
 
 function punteggioSquadra(sq) {
-  // "Tu sei..." conta SOLO i suoi bonus (i malus non entrano nel punteggio) + punti sfide
-  var tot = getSoloBonusLive(sq.seSt) + getSfidePts(sq.seSt);
+  // "Tu sei..." conta bonus E malus + punti sfide (come tutti gli altri)
+  var tot = getPuntiLive(sq.seSt) + getSfidePts(sq.seSt);
   // I 3 membri contano bonus + malus + punti sfide
   sq.membri.forEach(function(nome) {
     tot += getPuntiLive(nome) + getSfidePts(nome);
